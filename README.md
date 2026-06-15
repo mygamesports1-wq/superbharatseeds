@@ -2,7 +2,7 @@
 
 A responsive, high-performance static corporate website for **Super Bharat Seeds Company**, a certified manufacturer and distributor of high-quality agricultural seeds (primarily Wheat and Barley) in India. 
 
-**🚀 Live Deployment:** [https://mygamesports1-wq.github.io/superbharatseeds/](https://mygamesports1-wq.github.io/superbharatseeds/)
+**🚀 Live Deployment:** [https://superbharatseeds.vercel.app/](https://superbharatseeds.vercel.app/)
 
 
 ## 🌾 Overview
