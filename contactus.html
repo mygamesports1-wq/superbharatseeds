@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Contact Super Bharat Seeds Company – Get in touch about our certified wheat and barley seed varieties." />
+  <meta property="og:title" content="Contact Us | Super Bharat Seeds Company" />
+  <meta property="og:type" content="website" />
+  <title>Contact Us | Super Bharat Seeds Company</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── CONTACT-SPECIFIC ── */
+
+    /* CONTACT MAIN */
+    .contact-section {
+      padding: var(--section-py) 0;
+      background: var(--white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    /* Info Side */
+    .contact-info-title {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+    }
+
+    .contact-info h2 {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 3vw, 36px);
+      font-weight: 800;
+      color: var(--gray-900);
+      letter-spacing: -0.4px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .contact-info h2 em {
+      font-style: italic;
+      color: var(--green-700);
+    }
+
+    .contact-info>p {
+      font-size: 15px;
+      color: var(--gray-500);
+      line-height: 1.78;
+      margin-bottom: 36px;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .cdetail {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 18px 18px;
+      background: var(--gray-50);
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--r-lg);
+      transition:
+        border-color var(--t),
+        box-shadow var(--t);
+    }
+
+    .cdetail:hover {
+      border-color: var(--green-200);
+      box-shadow: 0 4px 16px rgba(26, 92, 56, 0.07);
+    }
+
+    .cdetail-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--r-md);
+      background: var(--green-50);
+      border: 1px solid var(--green-100);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .cdetail-body strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 3px;
+    }
+
+    .cdetail-body span {
+      font-size: 13px;
+      color: var(--gray-500);
+      line-height: 1.5;
+    }
+
+    .cdetail-body a {
+      color: var(--green-700);
+      font-weight: 600;
+    }
+
+    .cdetail-body a:hover {
+      text-decoration: underline;
+    }
+
+    .wa-contact-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 24px;
+      background: #25d366;
+      color: var(--white);
+      padding: 14px 22px;
+      border-radius: var(--r-md);
+      font-weight: 700;
+      font-size: 14px;
+      transition:
+        background var(--t),
+        transform var(--t);
+    }
+
+    .wa-contact-btn:hover {
+      background: #1db655;
+      transform: translateY(-1px);
+    }
+
+    .wa-contact-btn span {
+      font-size: 22px;
+    }
+
+    /* Form Side */
+    .contact-form-wrap {
+      background: var(--gray-50);
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--r-2xl);
+      padding: 40px 36px;
+    }
+
+    .contact-form-wrap h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 6px;
+    }
+
+    .contact-form-wrap>p {
+      font-size: 14px;
+      color: var(--gray-500);
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gray-700);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .form-group label .req {
+      color: var(--green-700);
+      margin-left: 2px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 11px 14px;
+      font-size: 14px;
+      color: var(--gray-800);
+      background: var(--white);
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--r-md);
+      outline: none;
+      transition:
+        border-color var(--t),
+        box-shadow var(--t);
+      font-family: var(--font-sans);
+    }
+
+    .form-control::placeholder {
+      color: var(--gray-300);
+    }
+
+    .form-control:focus {
+      border-color: var(--green-700);
+      box-shadow: 0 0 0 3px rgba(26, 92, 56, 0.1);
+    }
+
+    .form-control:hover {
+      border-color: var(--gray-300);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 120px;
+      line-height: 1.6;
+    }
+
+    select.form-control {
+      cursor: pointer;
+    }
+
+    .form-submit {
+      margin-top: 8px;
+    }
+
+    .form-submit .btn {
+      width: 100%;
+      justify-content: center;
+      padding: 14px;
+      font-size: 15px;
+    }
+
+    .form-note {
+      font-size: 12px;
+      color: var(--gray-400);
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .form-success {
+      display: none;
+      background: var(--green-50);
+      border: 1.5px solid var(--green-200);
+      border-radius: var(--r-md);
+      padding: 14px 18px;
+      font-size: 14px;
+      color: var(--green-700);
+      font-weight: 600;
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    .form-success.show {
+      display: block;
+    }
+
+    /* MAP */
+    .map-section {
+      padding: 0 0 var(--section-py);
+      background: var(--white);
+    }
+
+    .map-wrap {
+      border-radius: var(--r-2xl);
+      overflow: hidden;
+      border: 1.5px solid var(--gray-200);
+      height: 380px;
+      background: var(--green-50);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .map-placeholder {
+      text-align: center;
+      padding: 32px;
+    }
+
+    .map-placeholder p {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--green-700);
+      margin-bottom: 6px;
+    }
+
+    .map-placeholder span {
+      font-size: 13px;
+      color: var(--gray-500);
+    }
+
+    .map-placeholder .map-icon {
+      font-size: 48px;
+      margin-bottom: 14px;
+    }
+
+    /* FAQ */
+    .faq {
+      padding: var(--section-py) 0;
+      background: var(--gray-50);
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      transition: border-color var(--t);
+    }
+
+    .faq-item:hover {
+      border-color: var(--green-200);
+    }
+
+    .faq-q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gray-800);
+      gap: 12px;
+      user-select: none;
+    }
+
+    .faq-icon {
+      font-size: 18px;
+      color: var(--green-700);
+      flex-shrink: 0;
+      transition: transform var(--t);
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-a {
+      display: none;
+      padding: 0 20px 18px;
+      font-size: 13px;
+      color: var(--gray-500);
+      line-height: 1.7;
+      border-top: 1px solid var(--gray-100);
+      padding-top: 14px;
+    }
+
+    .faq-item.open .faq-a {
+      display: block;
+    }
+
+    /* RESPONSIVE CONTACT */
+    @media (max-width: 1024px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form-wrap {
+        padding: 28px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ANNOUNCE BAR -->
+  <div class="announce-bar">
+    🌱 Rabi Season 2025 — Wheat &amp; Barley seed varieties now available.
+    <a href="contactus.html">Request a quote →</a>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="Super Bharat Seeds Company – Home">
+          <div class="logo-mark" aria-hidden="true">🌱</div>
+          <div>
+            <div class="logo-name">Super Bharat Seeds Co.</div>
+            <div class="logo-sub">Certified Seed Manufacturer</div>
+          </div>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="contactus.html" class="active">Contact Us</a></li>
+          <li>
+            <a href="https://drive.google.com/file/d/1LEcvqqRynk_8EJF2yBHjK-L3dKNTBKiS/view?usp=sharing" target="_blank"
+              rel="noopener">Barley Seed ↗</a>
+          </li>
+          <li>
+            <a href="https://drive.google.com/file/d/1QClCPGTJko7Ol_7npb3J8dpDagbJfpRs/view?usp=sharing" target="_blank"
+              rel="noopener">Wheat Seed ↗</a>
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <a href="contactus.html" class="btn btn-primary btn-sm">Contact Us</a>
+          <button class="hamburger" id="ham" aria-label="Open menu" aria-expanded="false" aria-controls="mobNav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobNav">
+      <a href="index.html">Home</a>
+      <a href="about-us.html">About Us</a>
+      <a href="contactus.html">Contact Us</a>
+      <a href="https://drive.google.com/file/d/1LEcvqqRynk_8EJF2yBHjK-L3dKNTBKiS/view?usp=sharing" target="_blank"
+        rel="noopener">Barley Seed ↗</a>
+      <a href="https://drive.google.com/file/d/1QClCPGTJko7Ol_7npb3J8dpDagbJfpRs/view?usp=sharing" target="_blank"
+        rel="noopener">Wheat Seed ↗</a>
+      <a href="contactus.html" class="mob-cta">Contact Us →</a>
+    </div>
+  </nav>
+
+  <!-- PAGE BANNER -->
+  <section class="page-banner" aria-label="Contact Us page header">
+    <div class="container">
+      <div class="page-banner-inner">
+        <div class="eyebrow">Get In Touch</div>
+        <h1>Contact <em>Us</em></h1>
+        <p>
+          Contact us about anything related to our company or services. We'll
+          do our best to get back to you as soon as possible.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT MAIN -->
+  <section class="contact-section" aria-label="Contact information and form">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Info Side -->
+        <div class="contact-info reveal">
+          <div class="contact-info-title">Contact Information</div>
+          <h2>We'd love to<br /><em>hear from you</em></h2>
+          <p>
+            Contact us about anything related to our company or services.
+            We'll do our best to get back to you as soon as possible.
+          </p>
+          <div class="contact-details">
+            <div class="cdetail">
+              <div class="cdetail-icon">📍</div>
+              <div class="cdetail-body">
+                <strong>Our Office</strong>
+                <span>Super Bharat Seeds Company<br />Gurugram, Haryana, India</span>
+              </div>
+            </div>
+            <div class="cdetail">
+              <div class="cdetail-icon">📞</div>
+              <div class="cdetail-body">
+                <strong>Phone</strong>
+                <span><a href="tel:+919876543210">+91 98765 43210</a><br />Mon–Sat, 9:00 AM – 6:00 PM IST</span>
+              </div>
+            </div>
+            <div class="cdetail">
+              <div class="cdetail-icon">📧</div>
+              <div class="cdetail-body">
+                <strong>Email</strong>
+                <span><a
+                    href="mailto:contact@superbharatseedscompany.com">contact@superbharatseedscompany.com</a><br />We
+                  reply within 24 hours</span>
+              </div>
+            </div>
+            <div class="cdetail">
+              <div class="cdetail-icon">🌱</div>
+              <div class="cdetail-body">
+                <strong>Seed Brochures</strong>
+                <span>
+                  <a href="https://drive.google.com/file/d/1QClCPGTJko7Ol_7npb3J8dpDagbJfpRs/view?usp=sharing"
+                    target="_blank" rel="noopener">↓ Wheat Seed Brochure</a><br />
+                  <a href="https://drive.google.com/file/d/1LEcvqqRynk_8EJF2yBHjK-L3dKNTBKiS/view?usp=sharing"
+                    target="_blank" rel="noopener">↓ Barley Seed Brochure</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <a href="https://wa.me/919876543210" class="wa-contact-btn" target="_blank" rel="noopener">
+            <span>💬</span>
+            Chat with us on WhatsApp
+          </a>
+        </div>
+
+        <!-- Form Side -->
+        <div class="contact-form-wrap reveal d2">
+          <h3>Send Us a Message</h3>
+          <p>
+            Fill in the form below and our team will get back to you within 24
+            hours.
+          </p>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name <span class="req">*</span></label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Your full name" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 XXXXX XXXXX" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email <span class="req">*</span></label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com"
+                  required />
+              </div>
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" class="form-control" placeholder="Your company name" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject <span class="req">*</span></label>
+              <select id="subject" name="subject" class="form-control" required>
+                <option value="" disabled selected>Select a subject</option>
+                <option value="wheat-enquiry">Wheat Seed Enquiry</option>
+                <option value="barley-enquiry">Barley Seed Enquiry</option>
+                <option value="bulk-order">
+                  Bulk Order / Dealer Enquiry
+                </option>
+                <option value="technical-support">
+                  Technical / Agronomy Support
+                </option>
+                <option value="partnership">
+                  Partnership / Collaboration
+                </option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="question">Message <span class="req">*</span></label>
+              <textarea id="question" name="question" class="form-control"
+                placeholder="Tell us about your seed requirements, the crop you grow, your location, and any specific questions…"
+                required></textarea>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary btn-lg">
+                Send Message
+                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </button>
+            </div>
+            <div class="form-success" id="formSuccess">
+              ✅ Thank you! Your message has been received. We'll get back to
+              you within 24 hours.
+            </div>
+            <p class="form-note">
+              By submitting, you agree to our
+              <a href="#" style="color: var(--green-700)">Privacy Policy</a>.
+              We never share your data.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="map-section" aria-label="Our location">
+    <div class="container">
+      <div class="map-wrap reveal">
+        <div class="map-placeholder">
+          <div class="map-icon" aria-hidden="true">📍</div>
+          <p>Super Bharat Seeds Company</p>
+          <span>Rajasthan, India</span><br /><br />
+          <a href="https://maps.google.com/?q=Rajasthan,India" target="_blank" rel="noopener"
+            class="btn btn-outline btn-sm" style="margin-top: 12px; display: inline-flex">
+            Open in Google Maps ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" aria-label="Frequently asked questions">
+    <div class="container">
+      <div class="faq-header">
+        <div class="eyebrow reveal" style="justify-content: center">FAQ</div>
+        <h2 class="section-title reveal d1">Frequently Asked Questions</h2>
+        <p class="section-desc reveal d2">
+          Common questions about our seeds, ordering, and support.
+        </p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item reveal">
+          <div class="faq-q">
+            How do I order seeds from Super Bharat Seeds Company?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            You can contact us through this form, call us directly, or message
+            us on WhatsApp. Our team will guide you through available
+            varieties, quantities, and pricing for your specific requirements.
+          </div>
+        </div>
+        <div class="faq-item reveal d1">
+          <div class="faq-q">
+            Are your seeds government certified?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            Yes. All our seed varieties are certified by the National Seeds
+            Corporation (NSC) and relevant State Seed Certification Agencies.
+            Certification documents are available on request.
+          </div>
+        </div>
+        <div class="faq-item reveal d2">
+          <div class="faq-q">
+            Do you supply seeds in bulk for dealers?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            Absolutely. We have a dedicated dealer and distributor program
+            across North India. Please use the contact form above or select
+            "Bulk Order / Dealer Enquiry" in the subject to get started.
+          </div>
+        </div>
+        <div class="faq-item reveal d3">
+          <div class="faq-q">
+            Which states do you supply seeds to?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            We currently supply seeds across Rajasthan, Madhya Pradesh,
+            Haryana, Uttar Pradesh, and Punjab. We are expanding to more
+            states — contact us for current availability in your region.
+          </div>
+        </div>
+        <div class="faq-item reveal d4">
+          <div class="faq-q">
+            Can I download seed brochures?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            Yes. You can download our Wheat Seed and Barley Seed brochures
+            directly from the navigation bar or from the Products section on
+            our homepage. They contain full variety details and
+            specifications.
+          </div>
+        </div>
+        <div class="faq-item reveal d4">
+          <div class="faq-q">
+            Do you offer agronomy support after purchase?
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-a">
+            Yes. Our team of agronomists is available to support you before
+            sowing, during the season, and post-harvest. Call us or WhatsApp
+            us for any technical guidance related to our seed varieties.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="f-logo">
+            <div class="f-logo-mark" aria-hidden="true">🌱</div>
+            <div class="f-logo-name">Super Bharat Seeds Co.</div>
+          </div>
+          <p class="f-desc">
+            We are a team of passionate people whose goal is to improve
+            everyone's life through disruptive products. We build great
+            products to solve your business problems.
+          </p>
+          <div class="f-social" aria-label="Follow us on social media">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="Instagram">in</a>
+            <a href="#" aria-label="LinkedIn">li</a>
+          </div>
+        </div>
+        <div class="f-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Products</h4>
+          <ul>
+            <li>
+              <a href="https://drive.google.com/file/d/1QClCPGTJko7Ol_7npb3J8dpDagbJfpRs/view?usp=sharing"
+                target="_blank" rel="noopener">Wheat Seed ↗</a>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1LEcvqqRynk_8EJF2yBHjK-L3dKNTBKiS/view?usp=sharing"
+                target="_blank" rel="noopener">Barley Seed ↗</a>
+            </li>
+            <li><a href="contactus.html">Dealer Enquiry</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Stay Updated</h4>
+          <p style="
+                font-size: 13px;
+                line-height: 1.7;
+                margin-bottom: 14px;
+                color: rgba(255, 255, 255, 0.5);
+              ">
+            Get seasonal seed guides and agricultural updates delivered to
+            your inbox.
+          </p>
+          <div class="nl-form">
+            <input type="email" class="nl-input" placeholder="Your email address" aria-label="Email for newsletter" />
+            <button class="nl-btn" type="button">→</button>
+          </div>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© 2024 Super Bharat Seeds Company. All rights reserved.</p>
+        <div class="f-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919876543210" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    💬<span class="wa-tip">Chat with us</span>
+  </a>
+
+  <script src="main.js"></script>
+  <script>
+    // Contact form handler
+    document
+      .getElementById("contactForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value;
+        const question = document.getElementById("question").value.trim();
+        if (!name || !email || !subject || !question) {
+          alert("Please fill in all required fields.");
+          return;
+        }
+        const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRx.test(email)) {
+          alert("Please enter a valid email address.");
+          return;
+        }
+        document.getElementById("formSuccess").classList.add("show");
+        this.reset();
+        document
+          .getElementById("formSuccess")
+          .scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+    // FAQ accordion
+    document.querySelectorAll(".faq-q").forEach((q) => {
+      q.addEventListener("click", () => {
+        const item = q.parentElement;
+        const wasOpen = item.classList.contains("open");
+        document
+          .querySelectorAll(".faq-item")
+          .forEach((i) => i.classList.remove("open"));
+        if (!wasOpen) item.classList.add("open");
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="About Super Bharat Seeds Company – Empowering farmers with innovative, certified seed varieties for sustainable agriculture."
+    />
+    <meta property="og:title" content="About Us | Super Bharat Seeds Company" />
+    <meta property="og:type" content="website" />
+    <title>About Us | Super Bharat Seeds Company</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* ── ABOUT-SPECIFIC ── */
+
+      /* EMPOWERING FARMERS */
+      .empower {
+        padding: var(--section-py) 0;
+        background: var(--white);
+        border-bottom: 1px solid var(--gray-200);
+      }
+      .empower-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+      .empower-text .section-title {
+        margin-bottom: 20px;
+      }
+      .empower-text p {
+        font-size: 16px;
+        color: var(--gray-600);
+        line-height: 1.82;
+        margin-bottom: 20px;
+      }
+      .empower-img {
+        background: linear-gradient(
+          135deg,
+          var(--green-50) 0%,
+          var(--green-100) 100%
+        );
+        border-radius: var(--r-2xl);
+        height: 440px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 120px;
+        border: 1px solid var(--green-100);
+        position: relative;
+        overflow: hidden;
+      }
+      .empower-img::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        background: linear-gradient(
+          to top,
+          rgba(26, 92, 56, 0.08),
+          transparent
+        );
+      }
+      .empower-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-top: 32px;
+      }
+      .estat {
+        background: var(--gray-50);
+        border: 1.5px solid var(--gray-200);
+        border-radius: var(--r-lg);
+        padding: 20px 18px;
+        transition: border-color var(--t);
+      }
+      .estat:hover {
+        border-color: var(--green-200);
+      }
+      .estat-num {
+        font-family: var(--font-display);
+        font-size: 30px;
+        font-weight: 800;
+        color: var(--green-700);
+        line-height: 1;
+      }
+      .estat-lbl {
+        font-size: 12px;
+        color: var(--gray-500);
+        margin-top: 4px;
+        font-weight: 500;
+      }
+      .estat.green {
+        background: var(--green-700);
+        border-color: var(--green-700);
+      }
+      .estat.green .estat-num {
+        color: #a8ffc8;
+      }
+      .estat.green .estat-lbl {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* EXPLORE NEW HORIZONS */
+      .horizons {
+        padding: var(--section-py) 0;
+        background: var(--gray-50);
+        border-bottom: 1px solid var(--gray-200);
+      }
+      .horizons-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+      .horizons-img {
+        background: linear-gradient(135deg, #fdf8ed 0%, #f0dfa0 100%);
+        border-radius: var(--r-2xl);
+        height: 420px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 110px;
+        border: 1px solid #e8d98a;
+      }
+      .horizons-text .section-title {
+        margin-bottom: 20px;
+      }
+      .horizons-text p {
+        font-size: 16px;
+        color: var(--gray-600);
+        line-height: 1.82;
+        margin-bottom: 16px;
+      }
+      .horizons-quote {
+        margin-top: 28px;
+        padding: 20px 22px;
+        background: var(--green-700);
+        border-radius: var(--r-lg);
+        color: var(--white);
+        font-size: 15px;
+        font-style: italic;
+        line-height: 1.7;
+      }
+      .horizons-quote cite {
+        display: block;
+        margin-top: 10px;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.6);
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ACHIEVEMENT BANNER */
+      .ach-banner {
+        background: var(--gray-900);
+        padding: 60px 0;
+      }
+      .ach-banner-inner {
+        text-align: center;
+      }
+      .ach-banner h2 {
+        font-family: var(--font-display);
+        font-size: clamp(24px, 3vw, 36px);
+        font-weight: 800;
+        color: var(--white);
+        letter-spacing: -0.3px;
+        line-height: 1.2;
+      }
+      .ach-banner p {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 10px;
+      }
+      .ach-banner-chips {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 28px;
+      }
+      .ach-chip {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: var(--r-full);
+        padding: 10px 20px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--green-300);
+      }
+
+      /* TEAM */
+      .team {
+        padding: var(--section-py) 0;
+        background: var(--white);
+      }
+      .team-header {
+        text-align: center;
+        max-width: 580px;
+        margin: 0 auto 56px;
+      }
+      .team-header p {
+        font-size: 15px;
+        color: var(--gray-500);
+        margin-top: 10px;
+      }
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 22px;
+      }
+      .team-card {
+        background: var(--white);
+        border: 1.5px solid var(--gray-200);
+        border-radius: var(--r-xl);
+        overflow: hidden;
+        text-align: center;
+        transition:
+          transform var(--t),
+          box-shadow var(--t),
+          border-color var(--t);
+      }
+      .team-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--green-200);
+      }
+      .team-avatar {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        margin: 32px auto 10px auto;
+        background: linear-gradient(
+          135deg,
+          var(--green-50) 0%,
+          var(--green-100) 100%
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 64px;
+        position: relative;
+      }
+      .team-avatar.v2 {
+        background: linear-gradient(135deg, #fdf8ed 0%, #f0dfa0 100%);
+      }
+      .team-avatar.v3 {
+        background: linear-gradient(135deg, #edf3fd 0%, #bcd0f0 100%);
+      }
+      .team-avatar.v4 {
+        background: linear-gradient(135deg, #fdf0ed 0%, #f0c8bd 100%);
+      }
+      .team-role-tag {
+        position: absolute;
+        bottom: 12px;
+        right: -10px;
+        background: var(--green-600);
+        color: var(--white);
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        padding: 4px 10px;
+        border-radius: var(--r-full);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        border: 2px solid var(--white);
+      }
+      .team-body {
+        padding: 20px 18px;
+      }
+      .team-body h3 {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--gray-900);
+        margin-bottom: 3px;
+      }
+      .team-body .role {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--green-700);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+      .team-body p {
+        font-size: 12px;
+        color: var(--gray-500);
+        line-height: 1.65;
+      }
+
+      /* VALUES */
+      .values {
+        padding: var(--section-py) 0;
+        background: var(--gray-50);
+        border-top: 1px solid var(--gray-200);
+      }
+      .values-header {
+        text-align: center;
+        margin-bottom: 52px;
+      }
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .value-card {
+        background: var(--white);
+        border: 1.5px solid var(--gray-200);
+        border-radius: var(--r-xl);
+        padding: 32px 26px;
+        transition:
+          border-color var(--t),
+          box-shadow var(--t),
+          transform var(--t);
+      }
+      .value-card:hover {
+        border-color: var(--green-200);
+        box-shadow: var(--shadow-green);
+        transform: translateY(-3px);
+      }
+      .value-card.accent {
+        background: var(--green-700);
+        border-color: var(--green-700);
+      }
+      .val-icon {
+        font-size: 28px;
+        margin-bottom: 16px;
+      }
+      .val-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--gray-900);
+        margin-bottom: 10px;
+      }
+      .value-card.accent .val-title {
+        color: var(--white);
+      }
+      .val-desc {
+        font-size: 14px;
+        color: var(--gray-500);
+        line-height: 1.7;
+      }
+      .value-card.accent .val-desc {
+        color: rgba(255, 255, 255, 0.65);
+      }
+
+      /* RESPONSIVE ABOUT */
+      @media (max-width: 1024px) {
+        .empower-grid,
+        .horizons-grid {
+          grid-template-columns: 1fr;
+          gap: 48px;
+        }
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .values-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 768px) {
+        .empower-stats {
+          grid-template-columns: 1fr 1fr;
+        }
+        .team-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .values-grid {
+          grid-template-columns: 1fr;
+        }
+        .ach-banner-chips {
+          gap: 8px;
+        }
+      }
+      @media (max-width: 480px) {
+        .team-grid {
+          grid-template-columns: 1fr;
+        }
+        .empower-stats {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ANNOUNCE BAR -->
+    <div class="announce-bar">
+      🌱 Rabi Season 2025 — Wheat &amp; Barley seed varieties now available.
+      <a href="contactus.html">Request a quote →</a>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav-inner">
+          <a
+            href="index.html"
+            class="nav-logo"
+            aria-label="Super Bharat Seeds Company – Home"
+          >
+            <div class="logo-mark" aria-hidden="true">🌱</div>
+            <div>
+              <div class="logo-name">Super Bharat Seeds Co.</div>
+              <div class="logo-sub">Certified Seed Manufacturer</div>
+            </div>
+          </a>
+          <ul class="nav-links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html" class="active">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1LEcvqqRynk_8EJF2yBHjK-L3dKNTBKiS/view?usp=sharing"
+                target="_blank"
+                rel="noopener"
+                >Barley Seed ↗</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1QClCPGTJko7Ol_7npb3J8dpDagbJfpRs/view?usp=sharing"
+                target="_blank"
+                rel="noopener"
+                >Wheat Seed ↗</a
+              >
+            </li>
+          </ul>
+          <div class="nav-actions">
+            <a href="contactus.html" class="btn btn-primary btn-sm"
+              >Contact Us</a
+            >
+            <button
+              class="hamburger"
+              id="ham"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="mobNav"
+            >
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-nav" id="mobNav">
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="contactus.html">Contact Us</a>
+        <a
+          href="https://drive.google.com/file/d/1LEcvqqRynk_8EJF2yBHjK-L3dKNTBKiS/view?usp=sharing"
+          target="_blank"
+          rel="noopener"
+          >Barley Seed ↗</a
+        >
+        <a
+          href="https://drive.google.com/file/d/1QClCPGTJko7Ol_7npb3J8dpDagbJfpRs/view?usp=sharing"
+          target="_blank"
+          rel="noopener"
+          >Wheat Seed ↗</a
+        >
+        <a href="contactus.html" class="mob-cta">Contact Us →</a>
+      </div>
+    </nav>
+
+    <!-- PAGE BANNER -->
+    <section class="page-banner" aria-label="About Us page header">
+      <div class="container">
+        <div class="page-banner-inner">
+          <div class="eyebrow">About Us</div>
+          <h1>About <em>Us</em></h1>
+          <p>
+            Learn how Super Bharat Seeds Company is empowering farmers and
+            transforming Indian agriculture through certified seed innovation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMPOWERING FARMERS -->
+    <section class="empower" aria-label="Empowering Farmers">
+      <div class="container">
+        <div class="empower-grid">
+          <img src="https://www.superbharatseedscompany.com/web/image/website.s_image_text_default_image" alt="Empowering Farmers" class="empower-img reveal" style="object-fit: cover; width: 100%; height: 100%; min-height: 440px;" />
+          <div class="empower-text">
+            <div class="eyebrow reveal">About Us</div>
+            <h2 class="section-title reveal d1">Empowering <em>Farmers</em></h2>
+            <p class="reveal d2">
+              In a world where food security is paramount, farmers and
+              agricultural communities are increasingly turning to innovative
+              solutions to enhance crop yields and sustainability.
+            </p>
+            <p class="reveal d3">
+              At Super Bharat Seeds Company, we are committed to providing
+              farmers across India with the highest quality certified seeds —
+              engineered for performance, built for Indian conditions, and
+              backed by rigorous research and field trials.
+            </p>
+            <div class="empower-stats">
+              <div class="estat reveal d2">
+                <div class="estat-num">50%</div>
+                <div class="estat-lbl">Higher Crop Yields</div>
+              </div>
+              <div class="estat green reveal d3">
+                <div class="estat-num">90%</div>
+                <div class="estat-lbl">Germination Success</div>
+              </div>
+              <div class="estat reveal d3">
+                <div class="estat-num">3M+</div>
+                <div class="estat-lbl">Seeds Distributed</div>
+              </div>
+              <div class="estat reveal d4">
+                <div class="estat-num">600K</div>
+                <div class="estat-lbl">Varieties Developed</div>
+              </div>
+            </div>
+            <div style="margin-top: 28px" class="reveal d4">
+              <a href="contactus.html" class="btn btn-primary">Learn More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPLORE NEW HORIZONS -->
+    <section class="horizons" aria-label="Explore New Horizons">
+      <div class="container">
+        <div class="horizons-grid">
+          <div class="horizons-text">
+            <div class="eyebrow reveal">Our Seeds</div>
+            <h2 class="section-title reveal d1">
+              Explore New <em>Horizons</em>
+            </h2>
+            <p class="reveal d2">
+              Our seeds are engineered for resilience and productivity, offering
+              farmers the best chance for successful harvests. We provide a
+              range of hybrid and organic seeds tailored to meet the needs of
+              various crops and climates.
+            </p>
+            <p class="reveal d3">
+              Whether it is wheat for the vast plains of North India or barley
+              for arid Rajasthan — our seed portfolio is built around the real
+              challenges Indian farmers face every season.
+            </p>
+            <div class="horizons-quote reveal d4">
+              "Start with the farmer — understand their needs and provide them
+              with the best solutions."
+              <cite>— Super Bharat Seeds Company Philosophy</cite>
+            </div>
+            <div style="margin-top: 28px" class="reveal d4">
+              <a href="contactus.html" class="btn btn-outline">Learn More →</a>
+            </div>
+          </div>
+          <img src="https://www.superbharatseedscompany.com/web/image/website.s_parallax_default_image" alt="Explore New Horizons" class="horizons-img reveal d1" style="object-fit: cover; width: 100%; height: 100%; min-height: 420px;" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENT BANNER -->
+    <section class="ach-banner" aria-label="Achievements">
+      <div class="container">
+        <div class="ach-banner-inner">
+          <h2>
+            Transforming agriculture is achievable.<br />We've made it happen.
+          </h2>
+          <p>
+            Key milestones that reflect our commitment to agricultural
+            excellence across India.
+          </p>
+          <div class="ach-banner-chips">
+            <div class="ach-chip">✅ NSC Certified Seeds</div>
+            <div class="ach-chip">🌱 50% Higher Yields</div>
+            <div class="ach-chip">🧬 Advanced Hybrid Technology</div>
+            <div class="ach-chip">🚜 3 Million Seeds Distributed</div>
+            <div class="ach-chip">🌱 600,000 Varieties Developed</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team" aria-label="Meet our dedicated team">
+      <div class="container">
+        <div class="team-header">
+          <div class="eyebrow reveal" style="justify-content: center">
+            <span style="display: none">—</span>Our Team
+          </div>
+          <h2 class="section-title reveal d1">Meet our dedicated team</h2>
+          <p class="reveal d2">Passionate experts driving our growth</p>
+        </div>
+        <div class="team-grid">
+          <!-- Tony Fred -->
+          <div class="team-card reveal">
+            <div class="team-avatar" aria-hidden="true">
+              <img src="https://www.superbharatseedscompany.com/web/image/website.s_company_team_image_1" alt="Tony Fred" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; z-index: 0;" />
+              <div class="team-role-tag" style="z-index: 1;">CEO</div>
+            </div>
+            <div class="team-body">
+              <h3>Tony Fred</h3>
+              <div class="role">Chief Executive Officer</div>
+              <p>
+                Founder and chief visionary, Tony is the driving force behind
+                the company. He is deeply involved in the development of seed
+                technology, marketing, and farmer engagement strategies.
+              </p>
+            </div>
+          </div>
+          <!-- Ravi Kumar -->
+          <div class="team-card reveal d1">
+            <div class="team-avatar v2" aria-hidden="true">
+              <img src="https://www.superbharatseedscompany.com/web/image/website.s_company_team_image_2" alt="Ravi Kumar" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; z-index: 0;" />
+              <div class="team-role-tag" style="z-index: 1;">CCO</div>
+            </div>
+            <div class="team-body">
+              <h3>Ravi Kumar</h3>
+              <div class="role">Chief Commercial Officer</div>
+              <p>
+                Ravi thrives on innovation. With years of experience in
+                agricultural management, he has been instrumental in driving our
+                seed development initiatives. Ravi is a visionary in the field
+                of agriculture.
+              </p>
+            </div>
+          </div>
+          <!-- Aline Turner -->
+          <div class="team-card reveal d2">
+            <div class="team-avatar v3" aria-hidden="true">
+              <img src="https://www.superbharatseedscompany.com/web/image/website.s_company_team_image_3" alt="Aline Turner" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; z-index: 0;" />
+              <div class="team-role-tag" style="z-index: 1;">CTO</div>
+            </div>
+            <div class="team-body">
+              <h3>Aline Turner</h3>
+              <div class="role">Chief Technical Officer</div>
+              <p>
+                Aline is a dedicated leader who truly enjoys her work. She
+                mentors 100+ agronomists and oversees a community of thousands
+                of farmers and agricultural enthusiasts.
+              </p>
+            </div>
+          </div>
+          <!-- Iris Joe -->
+          <div class="team-card reveal d3">
+            <div class="team-avatar v4" aria-hidden="true">
+              <img src="https://www.superbharatseedscompany.com/web/image/website.s_company_team_image_4" alt="Iris Joe" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; z-index: 0;" />
+              <div class="team-role-tag" style="z-index: 1;">CEO</div>
+            </div>
+            <div class="team-body">
+              <h3>Iris Joe</h3>
+              <div class="role">Chief Executive Officer</div>
+              <p>
+                With his extensive background in agronomy, Iris helps us
+                optimize our seed development processes. He is passionate about
+                advancing agricultural practices and ensuring food security.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="values" aria-label="Our values">
+      <div class="container">
+        <div class="values-header">
+          <div class="eyebrow reveal" style="justify-content: center">
+            Our Values
+          </div>
+          <h2 class="section-title reveal d1">What Drives Us</h2>
+          <p class="section-desc reveal d2">
+            Our commitment to agriculture is rooted in core values that guide
+            every decision we make.
+          </p>
+        </div>
+        <div class="values-grid">
+          <div class="value-card reveal">
+            <div class="val-icon">🔬</div>
+            <div class="val-title">Innovation First</div>
+            <div class="val-desc">
+              We invest continuously in seed research and technology to stay at
+              the forefront of agricultural science and deliver superior
+              varieties to farmers.
+            </div>
+          </div>
+          <div class="value-card accent reveal d1">
+            <div class="val-icon">🌱</div>
+            <div class="val-title">Farmer-Centric</div>
+            <div class="val-desc">
+              Every decision starts with the farmer. We understand their needs,
+              challenges, and aspirations — and build solutions around them.
+            </div>
+          </div>
+          <div class="value-card reveal d2">
+            <div class="val-icon">🏅</div>
+            <div class="val-title">Uncompromising Quality</div>
+            <div class="val-desc">
+              From lab to field, every seed undergoes rigorous quality checks.
+              NSC and state certifications are the minimum standard — not the
+              ceiling.
+            </div>
+          </div>
+          <div class="value-card reveal d3">
+            <div class="val-icon">🤝</div>
+            <div class="val-title">Trust &amp; Transparency</div>
+            <div class="val-desc">
+              We build long-term relationships with farmers and partners through
+              honest communication, reliable supply, and consistent results.
+            </div>
+          </div>
+          <div class="value-card reveal d4">
+            <div class="val-icon">🌍</div>
+            <div class="val-title">Sustainable Agriculture</div>
+            <div class="val-desc">
+              We champion eco-conscious farming practices — from water-efficient
+              seed varieties to minimal-chemical cultivation approaches.
+            </div>
+          </div>
+          <div class="value-card reveal d4">
+            <div class="val-icon">🇮🇳</div>
+            <div class="val-title">Proudly Indian</div>
+            <div class="val-desc">
+              Built in India, for India. Our seeds are designed for Indian soil,
+              Indian climate, and Indian farmers — not adapted from foreign
+              varieties.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" aria-label="Site footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="f-logo">
+              <div class="f-logo-mark" aria-hidden="true">🌱</div>
+              <div class="f-logo-name">Super Bharat Seeds Co.</div>
+            </div>
+            <p class="f-desc">
+              We are a team of passionate people whose goal is to improve
+              everyone's life through disruptive products. We build great
+              products to solve your business problems.
+            </p>
+            <div class="f-social" aria-label="Follow us on social media">
+              <a href="#" aria-label="Facebook">f</a>
+              <a href="#" aria-label="Twitter">𝕏</a>
+              <a href="#" aria-label="Instagram">in</a>
+              <a href="#" aria-label="LinkedIn">li</a>
+            </div>
+          </div>
+          <div class="f-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="f-col">
+            <h4>Products</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://drive.google.com/file/d/1QClCPGTJko7Ol_7npb3J8dpDagbJfpRs/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener"
+                  >Wheat Seed ↗</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://drive.google.com/file/d/1LEcvqqRynk_8EJF2yBHjK-L3dKNTBKiS/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener"
+                  >Barley Seed ↗</a
+                >
+              </li>
+              <li><a href="contactus.html">Dealer Enquiry</a></li>
+            </ul>
+          </div>
+          <div class="f-col">
+            <h4>Stay Updated</h4>
+            <p
+              style="
+                font-size: 13px;
+                line-height: 1.7;
+                margin-bottom: 14px;
+                color: rgba(255, 255, 255, 0.5);
+              "
+            >
+              Get seasonal seed guides and agricultural updates delivered to
+              your inbox.
+            </p>
+            <div class="nl-form">
+              <input
+                type="email"
+                class="nl-input"
+                placeholder="Your email address"
+                aria-label="Email for newsletter"
+              />
+              <button class="nl-btn" type="button">→</button>
+            </div>
+          </div>
+        </div>
+        <div class="f-bottom">
+          <p>© 2024 Super Bharat Seeds Company. All rights reserved.</p>
+          <div class="f-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/919876543210"
+      class="wa-float"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+    >
+      💬<span class="wa-tip">Chat with us</span>
+    </a>
+
+    <script src="main.js"></script>
+  </body>
+</html>

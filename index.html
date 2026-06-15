@@ -1,0 +1,1203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Super Bharat Seeds Company – Enhancing agriculture for future generations. Premium certified wheat and barley seeds for Indian farmers." />
+  <meta property="og:title" content="Home | Super Bharat Seeds Company" />
+  <meta property="og:description"
+    content="Enhancing agriculture for future generations. Certified wheat & barley seeds." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.superbharatseedscompany.com/" />
+  <title>Home | Super Bharat Seeds Company</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── HOME-SPECIFIC ── */
+
+    /* HERO */
+    .hero {
+      background: var(--white);
+      padding: 80px 0 0;
+      border-bottom: 1px solid var(--gray-200);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .kicker-bar {
+      width: 32px;
+      height: 3px;
+      background: var(--green-700);
+      border-radius: 2px;
+    }
+
+    .kicker-txt {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--green-700);
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(38px, 4.8vw, 58px);
+      font-weight: 800;
+      color: var(--gray-900);
+      line-height: 1.08;
+      letter-spacing: -0.8px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--green-700);
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      color: var(--gray-500);
+      line-height: 1.78;
+      max-width: 490px;
+      margin-bottom: 38px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 52px;
+    }
+
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      padding-top: 32px;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .trust-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trust-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--green-50);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .trust-txt strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gray-800);
+      line-height: 1.2;
+    }
+
+    .trust-txt span {
+      font-size: 11px;
+      color: var(--gray-400);
+      font-weight: 400;
+    }
+
+    /* Hero visual */
+    .hero-visual {
+      position: relative;
+      align-self: end;
+    }
+
+    .hero-img {
+      background: linear-gradient(145deg,
+          var(--green-50) 0%,
+          var(--green-100) 100%);
+      border-radius: var(--r-2xl) var(--r-2xl) 0 0;
+      height: 460px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 130px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-img::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg,
+          transparent 50%,
+          rgba(26, 92, 56, 0.06) 100%);
+    }
+
+    .hero-emoji {
+      position: relative;
+      z-index: 1;
+      filter: drop-shadow(0 12px 32px rgba(26, 92, 56, 0.2));
+    }
+
+    .hero-badge {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      background: var(--white);
+      border: 2px solid var(--green-100);
+      border-radius: var(--r-lg);
+      padding: 14px 20px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .badge-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--green-700);
+    }
+
+    .badge-val {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-top: 3px;
+    }
+
+    /* STATS STRIP */
+    .stats-strip {
+      background: var(--gray-900);
+    }
+
+    .stats-inner {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .stat-cell {
+      padding: 28px 14px;
+      text-align: center;
+      border-right: 1px solid rgba(255, 255, 255, 0.07);
+      transition: background var(--t);
+    }
+
+    .stat-cell:last-child {
+      border-right: none;
+    }
+
+    .stat-cell:hover {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+      letter-spacing: -0.3px;
+    }
+
+    .stat-num .hi {
+      color: var(--green-300);
+    }
+
+    .stat-lbl {
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.4);
+      margin-top: 6px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      line-height: 1.4;
+    }
+
+    /* ACHIEVEMENTS SECTION */
+    .achievements {
+      padding: var(--section-py) 0;
+      background: var(--gray-50);
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .ach-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 60px;
+    }
+
+    .ach-header .eyebrow {
+      justify-content: center;
+    }
+
+    .ach-header .eyebrow::before {
+      display: none;
+    }
+
+    .ach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .ach-card {
+      background: var(--white);
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--r-xl);
+      padding: 32px 28px;
+      transition:
+        border-color var(--t),
+        box-shadow var(--t),
+        transform var(--t);
+    }
+
+    .ach-card:hover {
+      border-color: var(--green-200);
+      box-shadow: var(--shadow-green);
+      transform: translateY(-3px);
+    }
+
+    .ach-card.featured {
+      background: var(--green-700);
+      border-color: var(--green-700);
+    }
+
+    .ach-icon {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .ach-num {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--green-700);
+      line-height: 1;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    .ach-card.featured .ach-num {
+      color: #a8ffc8;
+    }
+
+    .ach-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 8px;
+    }
+
+    .ach-card.featured .ach-title {
+      color: var(--white);
+    }
+
+    .ach-desc {
+      font-size: 13px;
+      color: var(--gray-500);
+      line-height: 1.65;
+    }
+
+    .ach-card.featured .ach-desc {
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    /* COMMITMENT */
+    .commitment {
+      padding: var(--section-py) 0;
+      background: var(--white);
+    }
+
+    .comm-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .comm-text .section-title {
+      margin-bottom: 20px;
+    }
+
+    .comm-text p {
+      font-size: 16px;
+      color: var(--gray-600);
+      line-height: 1.82;
+      margin-bottom: 16px;
+    }
+
+    .comm-img {
+      background: linear-gradient(135deg,
+          var(--green-50) 0%,
+          var(--green-100) 100%);
+      border-radius: var(--r-2xl);
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 110px;
+      position: relative;
+      border: 1px solid var(--green-100);
+      overflow: hidden;
+    }
+
+    .comm-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .comm-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--r-lg);
+      padding: 22px 18px;
+      transition:
+        border-color var(--t),
+        box-shadow var(--t);
+    }
+
+    .comm-card:hover {
+      border-color: var(--green-200);
+      box-shadow: 0 4px 16px rgba(26, 92, 56, 0.08);
+    }
+
+    .comm-card.green {
+      background: var(--green-700);
+      border-color: var(--green-700);
+    }
+
+    .comm-card-icon {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .comm-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 5px;
+    }
+
+    .comm-card.green h4 {
+      color: var(--white);
+    }
+
+    .comm-card p {
+      font-size: 12px;
+      color: var(--gray-500);
+      line-height: 1.6;
+    }
+
+    .comm-card.green p {
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    /* PRODUCTS */
+    .products {
+      padding: var(--section-py) 0;
+      background: var(--gray-50);
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .prod-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 48px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .prod-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .prod-card {
+      background: var(--white);
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--r-2xl);
+      overflow: hidden;
+      transition:
+        transform var(--t),
+        box-shadow var(--t),
+        border-color var(--t);
+    }
+
+    .prod-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--green-200);
+    }
+
+    .prod-img {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+      position: relative;
+    }
+
+    .prod-img.wheat {
+      background: linear-gradient(135deg, #edf7f2 0%, #c2e3d0 100%);
+    }
+
+    .prod-img.barley {
+      background: linear-gradient(135deg, #fdf8ed 0%, #f0dfa0 100%);
+    }
+
+    .prod-cert {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: var(--gray-900);
+      color: var(--white);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: var(--r-full);
+    }
+
+    .prod-body {
+      padding: 28px;
+    }
+
+    .prod-body h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 10px;
+    }
+
+    .prod-body p {
+      font-size: 14px;
+      color: var(--gray-500);
+      line-height: 1.72;
+      margin-bottom: 20px;
+    }
+
+    .prod-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .tag {
+      background: var(--green-50);
+      color: var(--green-700);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: var(--r-full);
+      border: 1px solid var(--green-100);
+    }
+
+    .prod-footer {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding-top: 20px;
+      border-top: 1px solid var(--gray-100);
+    }
+
+    /* COLLABORATORS */
+    .collaborators {
+      padding: 64px 0;
+      background: var(--white);
+    }
+
+    .collab-head {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .collab-head .eyebrow {
+      justify-content: center;
+    }
+
+    .collab-head .eyebrow::before {
+      display: none;
+    }
+
+    .collab-head p {
+      font-size: 15px;
+      color: var(--gray-500);
+      margin-top: 10px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    .collab-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .collab-img {
+      height: 120px;
+      object-fit: contain;
+      filter: grayscale(100%) opacity(0.6);
+      transition: filter var(--t), transform var(--t);
+      padding: 10px 20px;
+    }
+
+    .collab-img:hover {
+      filter: grayscale(0%) opacity(1);
+      transform: scale(1.05);
+    }
+
+    /* INNOVATION CTA */
+    .innovation-cta {
+      background: var(--green-700);
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .innovation-cta::before {
+      content: "🌱";
+      position: absolute;
+      right: 80px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 180px;
+      opacity: 0.07;
+      pointer-events: none;
+    }
+
+    .innovation-cta::after {
+      content: "🌱";
+      position: absolute;
+      left: 60px;
+      top: 20%;
+      font-size: 100px;
+      opacity: 0.05;
+      pointer-events: none;
+    }
+
+    .inno-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .inno-inner h2 {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 3.2vw, 38px);
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.4px;
+      line-height: 1.15;
+    }
+
+    .inno-inner p {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 10px;
+      line-height: 1.7;
+      max-width: 500px;
+    }
+
+    .inno-btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+
+    /* RESPONSIVE HOME */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .hero {
+        padding-bottom: 64px;
+      }
+
+      .hero-sub {
+        max-width: 100%;
+      }
+
+      .stats-inner {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .stat-cell:nth-child(3) {
+        border-right: none;
+      }
+
+      .stat-cell:nth-child(4),
+      .stat-cell:nth-child(5),
+      .stat-cell:nth-child(6) {
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      .stat-cell:nth-child(6) {
+        border-right: none;
+      }
+
+      .comm-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .stats-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat-cell:nth-child(2) {
+        border-right: none;
+      }
+
+      .stat-cell:nth-child(3) {
+        border-right: 1px solid rgba(255, 255, 255, 0.07);
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      .stat-cell:nth-child(4) {
+        border-right: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      .stat-cell:nth-child(5) {
+        border-right: 1px solid rgba(255, 255, 255, 0.07);
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      .stat-cell:nth-child(6) {
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      .ach-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .prod-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .comm-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .inno-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .inno-btns {
+        justify-content: center;
+      }
+
+      .innovation-cta::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero-ctas {
+        flex-direction: column;
+      }
+
+      .hero-ctas .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-trust {
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ANNOUNCE BAR -->
+  <div class="announce-bar">
+    🌱 Rabi Season 2025 — Wheat &amp; Barley seed varieties now available.
+    <a href="contactus.html">Request a quote →</a>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="Super Bharat Seeds Company – Home">
+          <div class="logo-mark" aria-hidden="true">🌱</div>
+          <div>
+            <div class="logo-name">Super Bharat Seeds Co.</div>
+            <div class="logo-sub">Certified Seed Manufacturer</div>
+          </div>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li>
+            <a href="https://drive.google.com/file/d/1LEcvqqRynk_8EJF2yBHjK-L3dKNTBKiS/view?usp=sharing" target="_blank"
+              rel="noopener">Barley Seed ↗</a>
+          </li>
+          <li>
+            <a href="https://drive.google.com/file/d/1QClCPGTJko7Ol_7npb3J8dpDagbJfpRs/view?usp=sharing" target="_blank"
+              rel="noopener">Wheat Seed ↗</a>
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <a href="contactus.html" class="btn btn-primary btn-sm">Contact Us</a>
+          <button class="hamburger" id="ham" aria-label="Open menu" aria-expanded="false" aria-controls="mobNav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobNav">
+      <a href="index.html">Home</a>
+      <a href="about-us.html">About Us</a>
+      <a href="contactus.html">Contact Us</a>
+      <a href="https://drive.google.com/file/d/1LEcvqqRynk_8EJF2yBHjK-L3dKNTBKiS/view?usp=sharing" target="_blank"
+        rel="noopener">Barley Seed ↗</a>
+      <a href="https://drive.google.com/file/d/1QClCPGTJko7Ol_7npb3J8dpDagbJfpRs/view?usp=sharing" target="_blank"
+        rel="noopener">Wheat Seed ↗</a>
+      <a href="contactus.html" class="mob-cta">Contact Us →</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-kicker reveal">
+            <div class="kicker-bar"></div>
+            <span class="kicker-txt">Certified Seed Manufacturer · India</span>
+          </div>
+          <h1 class="reveal d1">
+            Enhance <em>agriculture</em><br />for future generations
+          </h1>
+          <p class="hero-sub reveal d2">
+            Every initiative we undertake towards agricultural innovation is a
+            pledge to enhance food security and support farmers, for today and
+            tomorrow.
+          </p>
+          <div class="hero-ctas reveal d3">
+            <a href="contactus.html" class="btn btn-primary btn-lg">
+              Contact Us
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+            <a href="https://drive.google.com/file/d/1QClCPGTJko7Ol_7npb3J8dpDagbJfpRs/view?usp=sharing" target="_blank"
+              rel="noopener" class="btn btn-outline btn-lg">
+              ↓ Wheat Seed Brochure
+            </a>
+          </div>
+          <div class="hero-trust reveal d4">
+            <div class="trust-chip">
+              <div class="trust-icon">✅</div>
+              <div class="trust-txt">
+                <strong>NSC Certified</strong>
+                <span>Government approved</span>
+              </div>
+            </div>
+            <div class="trust-chip">
+              <div class="trust-icon">📈</div>
+              <div class="trust-txt">
+                <strong>50% Higher Yield</strong>
+                <span>Field-proven results</span>
+              </div>
+            </div>
+            <div class="trust-chip">
+              <div class="trust-icon">🇮🇳</div>
+              <div class="trust-txt">
+                <strong>Made in India</strong>
+                <span>For Indian farmers</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-img">
+            <span class="hero-emoji">🌱</span>
+          </div>
+          <div class="hero-badge">
+            <div class="badge-label">Current Season</div>
+            <div class="badge-val">Rabi 2025 · Active</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ACHIEVEMENTS -->
+  <section class="achievements" aria-label="Key achievements">
+    <div class="container">
+      <div class="ach-header">
+        <div class="eyebrow reveal">Key Achievements</div>
+        <h2 class="section-title reveal d1">
+          Key achievements in<br /><em>seed innovation</em>
+        </h2>
+        <p class="section-desc reveal d2">
+          From sustainable farming practices to innovative seed technology and
+          crop diversity, our key milestones reflect our commitment to
+          enhancing agricultural productivity for all.
+        </p>
+      </div>
+      <div class="ach-grid">
+        <div class="ach-card reveal">
+          <div class="ach-icon">🌱</div>
+          <div class="ach-num">50%</div>
+          <div class="ach-title">Increase in Crop Yields</div>
+          <div class="ach-desc">
+            Our seed varieties consistently deliver 50% higher yields compared
+            to conventional seeds, transforming farm economics across India.
+          </div>
+        </div>
+        <div class="ach-card featured reveal d1">
+          <div class="ach-icon">🧬</div>
+          <div class="ach-num">90%</div>
+          <div class="ach-title">Seed Germination Success Rate</div>
+          <div class="ach-desc">
+            Industry-leading germination rates achieved through rigorous
+            quality testing and advanced hybrid seed technology.
+          </div>
+        </div>
+        <div class="ach-card reveal d2">
+          <div class="ach-icon">🏅</div>
+          <div class="ach-num">60%</div>
+          <div class="ach-title">High-Quality Seed Production</div>
+          <div class="ach-desc">
+            60% of our portfolio comprises premium-grade certified seeds —
+            meeting and exceeding national quality benchmarks.
+          </div>
+        </div>
+        <div class="ach-card reveal d3">
+          <div class="ach-icon">🚜</div>
+          <div class="ach-num">3 Million</div>
+          <div class="ach-title">Seeds Distributed</div>
+          <div class="ach-desc">
+            Over three million seeds distributed to farmers across India,
+            supporting food security at a national scale.
+          </div>
+        </div>
+        <div class="ach-card reveal d4">
+          <div class="ach-icon">🌱</div>
+          <div class="ach-num">1.2 Million</div>
+          <div class="ach-title">Seeds Distributed (Phase 2)</div>
+          <div class="ach-desc">
+            Continued expansion across newer agro-climatic zones with 1.2
+            million additional seeds reaching farmers in phase two.
+          </div>
+        </div>
+        <div class="ach-card reveal d4">
+          <div class="ach-icon">🔬</div>
+          <div class="ach-num">600,000</div>
+          <div class="ach-title">Seed Varieties Developed</div>
+          <div class="ach-desc">
+            A vast portfolio of 600,000 seed varieties developed through
+            collaboration with agricultural research institutions.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMITMENT -->
+  <section class="commitment" aria-label="Our commitment to agricultural excellence">
+    <div class="container">
+      <div class="comm-grid">
+        <div class="comm-text">
+          <div class="eyebrow reveal">Our Commitment</div>
+          <h2 class="section-title reveal d1">
+            A Commitment to<br /><em>Agricultural Excellence</em>
+          </h2>
+          <p class="reveal d2">
+            Seed innovation is the process of developing new seed varieties
+            that improve crop performance, enhance resistance to pests and
+            diseases, and adapt to changing environmental conditions.
+          </p>
+          <p class="reveal d3">
+            It plays a crucial role in ensuring food security and sustainable
+            agriculture. We partner with agricultural experts and research
+            institutions to develop superior seed varieties that thrive in
+            diverse climates.
+          </p>
+          <div style="margin-top: 32px" class="reveal d4">
+            <a href="about-us.html" class="btn btn-outline">More Information →</a>
+          </div>
+        </div>
+        <img src="https://www.superbharatseedscompany.com/web/image/website.s_text_image_default_image" alt="Commitment"
+          class="comm-img reveal" style="object-fit: cover; width: 100%; height: 100%; min-height: 420px;" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products" aria-label="Our seed products">
+    <div class="container">
+      <div class="prod-header">
+        <div>
+          <div class="eyebrow reveal">Our Products</div>
+          <h2 class="section-title reveal d1">
+            Seeds Built for<br /><em>Every Indian Season</em>
+          </h2>
+          <p class="section-desc reveal d2" style="max-width: 480px">
+            High-yield wheat and barley seed varieties — certified,
+            field-tested, proven.
+          </p>
+        </div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap" class="reveal d2">
+          <a href="https://drive.google.com/file/d/1QClCPGTJko7Ol_7npb3J8dpDagbJfpRs/view?usp=sharing" target="_blank"
+            rel="noopener" class="btn btn-ghost btn-sm">↓ Wheat Brochure</a>
+          <a href="https://drive.google.com/file/d/1LEcvqqRynk_8EJF2yBHjK-L3dKNTBKiS/view?usp=sharing" target="_blank"
+            rel="noopener" class="btn btn-ghost btn-sm">↓ Barley Brochure</a>
+        </div>
+      </div>
+      <div class="prod-grid">
+        <div class="prod-card reveal">
+          <div class="prod-img wheat" aria-hidden="true">
+            <img src="images/wheat.jpg" alt="Wheat Seeds"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;" />
+            <span class="prod-cert" style="z-index: 1;">Rabi Season</span>
+          </div>
+          <div class="prod-body">
+            <h3>Wheat Seeds</h3>
+            <p>
+              Our premium wheat seed varieties are engineered for resilience
+              and productivity, offering farmers the best chance for
+              successful harvests across diverse Indian soil types and
+              agro-climatic zones.
+            </p>
+            <div class="prod-tags">
+              <span class="tag">NSC Certified</span>
+              <span class="tag">High Yield</span>
+              <span class="tag">Rust Resistant</span>
+              <span class="tag">Rabi Season</span>
+              <span class="tag">90% Germination</span>
+            </div>
+            <div class="prod-footer">
+              <a href="contactus.html" class="btn btn-primary btn-sm">Enquire Now</a>
+              <a href="https://drive.google.com/file/d/1QClCPGTJko7Ol_7npb3J8dpDagbJfpRs/view?usp=sharing"
+                target="_blank" rel="noopener" class="btn btn-ghost btn-sm">↓ Brochure</a>
+            </div>
+          </div>
+        </div>
+        <div class="prod-card reveal d1">
+          <div class="prod-img barley" aria-hidden="true">
+            <img src="images/barley.JPG" alt="Barley Seeds"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;" />
+            <span class="prod-cert" style="z-index: 1;">Rabi Season</span>
+          </div>
+          <div class="prod-body">
+            <h3>Barley Seeds</h3>
+            <p>
+              Our barley seed varieties are tailored to meet the needs of
+              various crops and climates, with strong drought tolerance and
+              premium malt quality — ideal for arid and semi-arid farming
+              regions across North India.
+            </p>
+            <div class="prod-tags">
+              <span class="tag">State Certified</span>
+              <span class="tag">Drought Tolerant</span>
+              <span class="tag">High Malt Quality</span>
+              <span class="tag">Rabi Season</span>
+              <span class="tag">Hybrid Variety</span>
+            </div>
+            <div class="prod-footer">
+              <a href="contactus.html" class="btn btn-primary btn-sm">Enquire Now</a>
+              <a href="https://drive.google.com/file/d/1LEcvqqRynk_8EJF2yBHjK-L3dKNTBKiS/view?usp=sharing"
+                target="_blank" rel="noopener" class="btn btn-ghost btn-sm">↓ Brochure</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLABORATORS -->
+  <section class="collaborators" aria-label="Collaborators and partners">
+    <div class="container">
+      <div class="collab-head">
+        <div class="eyebrow reveal">Collaborators</div>
+        <h2 class="section-title reveal d1">
+          Collaborators and testimonials
+        </h2>
+        <p class="reveal d2">
+          We partner with agricultural experts and research institutions to
+          develop superior seed varieties that thrive in diverse climates.
+        </p>
+      </div>
+      <div class="collab-logos reveal d3">
+        <img src="https://www.superbharatseedscompany.com/web/image/website.s_reference_demo_image_1"
+          alt="Collaborator 1" class="collab-img" />
+        <img src="https://www.superbharatseedscompany.com/web/image/website.s_reference_demo_image_2"
+          alt="Collaborator 2" class="collab-img" />
+        <img src="https://www.superbharatseedscompany.com/web/image/website.s_reference_demo_image_3"
+          alt="Collaborator 3" class="collab-img" />
+        <img src="https://www.superbharatseedscompany.com/web/image/website.s_reference_demo_image_4"
+          alt="Collaborator 4" class="collab-img" />
+        <img src="https://www.superbharatseedscompany.com/web/image/website.s_reference_demo_image_5"
+          alt="Collaborator 5" class="collab-img" />
+        <img src="https://www.superbharatseedscompany.com/web/image/website.s_reference_default_image_6"
+          alt="Collaborator 6" class="collab-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- INNOVATION CTA -->
+  <section class="innovation-cta" aria-label="Innovation for Sustainable Agriculture">
+    <div class="container">
+      <div class="inno-inner">
+        <div>
+          <h2>Innovation for Sustainable Agriculture</h2>
+          <p>
+            Join us in our mission to revolutionize agriculture and support
+            sustainable farming practices. We are dedicated to providing
+            farmers with the tools they need to succeed.
+          </p>
+        </div>
+        <div class="inno-btns reveal">
+          <a href="contactus.html" class="btn btn-white btn-lg">
+            Be Part of the Agricultural Revolution
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="f-logo">
+            <div class="f-logo-mark" aria-hidden="true">🌱</div>
+            <div class="f-logo-name">Super Bharat Seeds Co.</div>
+          </div>
+          <p class="f-desc">
+            We are a team of passionate people whose goal is to improve
+            everyone's life through disruptive products. We build great
+            products to solve your business problems.
+          </p>
+          <div class="f-social" aria-label="Follow us on social media">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="Instagram">in</a>
+            <a href="#" aria-label="LinkedIn">li</a>
+          </div>
+        </div>
+        <div class="f-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Products</h4>
+          <ul>
+            <li>
+              <a href="https://drive.google.com/file/d/1QClCPGTJko7Ol_7npb3J8dpDagbJfpRs/view?usp=sharing"
+                target="_blank" rel="noopener">Wheat Seed ↗</a>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1LEcvqqRynk_8EJF2yBHjK-L3dKNTBKiS/view?usp=sharing"
+                target="_blank" rel="noopener">Barley Seed ↗</a>
+            </li>
+            <li><a href="contactus.html">Dealer Enquiry</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Stay Updated</h4>
+          <p class="f-newsletter-txt" style="
+                font-size: 13px;
+                line-height: 1.7;
+                margin-bottom: 14px;
+                color: rgba(255, 255, 255, 0.5);
+              ">
+            Get seasonal seed guides and agricultural updates delivered to
+            your inbox.
+          </p>
+          <div class="nl-form">
+            <input type="email" class="nl-input" placeholder="Your email address" aria-label="Email for newsletter" />
+            <button class="nl-btn" type="button">→</button>
+          </div>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© 2024 Super Bharat Seeds Company. All rights reserved.</p>
+        <div class="f-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/919876543210" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    💬<span class="wa-tip">Chat with us</span>
+  </a>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
