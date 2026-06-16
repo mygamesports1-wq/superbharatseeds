@@ -150,6 +150,15 @@ input, textarea, select { font-family: inherit; }
   bottom: -3px; left: 13px; right: 13px;
   height: 2.5px; background: var(--green-700); border-radius: 2px;
 }
+.dropdown { position: relative; }
+.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--white); min-width: 220px; box-shadow: var(--shadow-lg); border-radius: var(--r-sm); padding: 8px 0; z-index: 300; border: 1px solid var(--gray-200); }
+.dropdown:hover .dropdown-menu, .dropdown:focus-within .dropdown-menu { display: block; }
+.dropdown-menu li { display: block; }
+.dropdown-menu a { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px; font-size: 13px; color: var(--gray-700); white-space: normal; line-height: 1.4; border-radius: 0; }
+.dropdown-menu a:hover { background: var(--green-50); color: var(--green-700); }
+.dropdown-menu a::after { display: none !important; }
+.dl-badge { display: inline-flex; align-items: center; justify-content: center; background: var(--green-50); color: var(--green-700); width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--green-200); margin-left: auto; flex-shrink: 0; transition: background var(--t), color var(--t), transform var(--t); }
+.dropdown-menu a:hover .dl-badge { background: var(--green-700); color: var(--white); transform: translateY(-1px); }
 .nav-actions { display: flex; align-items: center; gap: 12px; }
 .nav-phone { font-size: 13px; font-weight: 600; color: var(--gray-700); display: flex; align-items: center; gap: 6px; }
 .nav-phone svg { color: var(--green-700); }
@@ -162,6 +171,9 @@ input, textarea, select { font-family: inherit; }
 .mobile-nav.open { display: block; }
 .mobile-nav a { display: block; padding: 14px 24px; font-size: 15px; font-weight: 500; color: var(--gray-700); border-bottom: 1px solid var(--gray-100); transition: color var(--t), background var(--t); }
 .mobile-nav a:hover { color: var(--green-700); background: var(--green-50); }
+.mob-nav-header { padding: 14px 24px 4px; font-size: 13px; font-weight: 700; text-transform: uppercase; color: var(--gray-400); letter-spacing: 1px; }
+.mobile-nav a.mob-sub-link { display: flex; align-items: center; justify-content: space-between; padding-left: 40px; font-size: 14px; color: var(--gray-600); }
+.mobile-nav a.mob-sub-link:hover .dl-badge { background: var(--green-700); color: var(--white); }
 .mobile-nav .mob-cta { margin: 16px 24px 20px; display: block; text-align: center; background: var(--green-700); color: var(--white); font-weight: 700; padding: 13px; border-radius: var(--r-sm); }
 
 /* ── PAGE HERO BANNER (inner pages) ── */
